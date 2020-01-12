@@ -9,18 +9,21 @@ header {
 main {
   background: #00EE00;
   margin: 0 auto;
-  width: 600px;
+  /* width: 600px; */
+  width: 300px;
 }
 #column1 {
   background: #00EEEE;
   float: left;
-  width: 100px;
+  /* width: 100px; */
+  width: 50px;
 }
    
 #column2 {
   background: #EEEE00;
   float: left;
-  width: 500px;
+  /* width: 500px; */
+  width: 100px;
 }
  
 footer {
