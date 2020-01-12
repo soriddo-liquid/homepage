@@ -1,56 +1,29 @@
-/*.font {font-family:"ＭＳＰ明朝", serif;}*/
-
-/*
-    リンク用
-    http://sakichin.com/chapter02/chapter02_step03_05.html
-*/
-a {
-    font-weight:normal;
-    text-decoration:none;
-    }
-    
-    a:link {
-    color:#0000FF;
-    }
-    
-    a:visited {
-    color:#6600FF;
-    }
-    
-    a:hover {
-    color:#FF0099;
-    text-decoration:underline;
-    }
-    
-    a:active {
-    color:#33CC00;
-    }
-    
-    /*
-        リンク用ボタン
-        フラットスクエア
-        https://saruwakakun.com/html-css/reference/buttons
-    */
-    .btn-flat-simple {
-      position: relative;
-      display: inline-block;
-      font-weight: bold;
-      padding: 0.25em 0.5em;
-      text-decoration: none;
-      color: #00BCD4;
-      background: #ECECEC;
-      transition: .4s;
-    }
-    
-    .btn-flat-simple:hover {
-      background: #00bcd4;
-      color: white;
-    }
-/*
-      マージン（余白）
-      http://open.shonan.bunkyo.ac.jp/~ohtan/kouza/css-margin.html
-*/
-      div1{
-        margin : 30px ;
-        padding : 20px ;
-   } 
+body {
+  background: #EEEEEE;
+}
+ 
+header {
+  background: #0000FF;
+}
+ 
+main {
+  background: #00EE00;
+  margin: 0 auto;
+  width: 600px;
+}
+#column1 {
+  background: #00EEEE;
+  float: left;
+  width: 100px;
+}
+   
+#column2 {
+  background: #EEEE00;
+  float: left;
+  width: 500px;
+}
+ 
+footer {
+  clear: both;
+  background: #EE0000;
+}
