@@ -133,21 +133,23 @@ p.line {
   clear: both;
   margin: 0px auto;
 }
+.pc_area{
+  display:block;
+}
+.phone_area{
+  display:none;
+}
 
+/* @media screen and (max-width: 768px){ */
 /*-- スマホ版表示CSS  --*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 999px){
   .inlineframe {
-    float: left;
-   /* background-color:#FFFFFF; */
-   width: 0px;
-   height:600px;
-   /* height: 100vh; */
-   overflow:auto;
-   overflow-y:scroll;
-   overflow-x:hidden;
+   display:none;
   }
-  .inlineframe li{
-    font-size: 0.9em;
+  .pc_area{
+    display:none;
   }
-
+  .phone_area{
+    display:block;
+  }
 }
