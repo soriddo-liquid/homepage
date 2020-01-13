@@ -28,20 +28,22 @@ article, aside, details, figcaption, figure, header, hgroup, menu, nav, section 
   padding: 26px 10px 20px 10px;
 }
 
-/* header{
-  z-index: 10;
-  height: 64px;
-  position: absolute;
+header{
+  height: 100px;
+  /* position: absolute; */
   background-color: #333;
   width: 100%;
+  max-width: 960px;
+  height:150px;
   text-align: center;
   z-index: 2;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-} */
-header {
+  box-shadow: 0px 0px 0px 0px #00000040;
+  border: dashed 1px #999;
+}
+/* header {
   border: dashed 1px #999;
   height:100px;
-}
+} */
 
 #contents {
   float: left;
@@ -80,7 +82,7 @@ a:active {
 p.line { 
   border-left: 2px solid #bebebe; height: 120px;
 }
-.inlineframe {
+#inlineframe {
   float: left;
  /* background-color:#FFFFFF; */
  width: 189px;
@@ -92,7 +94,7 @@ p.line {
  
 }
 .inlineframe li{
-  font-size: 1.2em;
+  font-size: 1.2rem;
 
 
   /* list-style-type:none; */
@@ -157,7 +159,7 @@ p.line {
 /* @media screen and (max-width: 768px){ */
 /*-- スマホ版表示CSS  --*/
 @media screen and (max-width: 999px){
-  .inlineframe {
+  #inlineframe {
    display:none;
   }
   .pc_area{
@@ -168,5 +170,8 @@ p.line {
   }
   #contents {
     width: 958px;
+  }
+  #wrap {
+    width: device-width;
   }
 }
