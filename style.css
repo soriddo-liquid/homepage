@@ -11,108 +11,121 @@ article, aside, details, figcaption, figure, header, hgroup, menu, nav, section 
 .phone_area {
   display: none;
 }
-#wrap {
-  width: device-width;
-  max-width: 960px;
-  margin: 0px auto;
-  background-color: #c6d4f8;
+body {
+  display: flex;
+  flex-direction: column;
 }
-.topmenu {
-  overflow: hidden;
-  list-style: none;
-  margin: 0 auto;
-  z-index: 20;
-}
-.topmenu li {
-  /* display: inline-block; */
-  padding: 26px 10px 20px 10px;
-}
-header {
-  height: 100px;
-  /* position: absolute; */
-  /* background-color: #333; */
-  width: device-width;
-  max-width: 958px;
-  height: 150px;
+.grovalNavigation {
+  height: 70px;
   text-align: center;
-  z-index: 2;
-  box-shadow: 0px 0px 0px 0px #00000040;
-  border: dashed 1px #999;
+  background-color: #888;
+  color: #fff;
 }
-
-/* header {
-  border: dashed 1px #999;
-  height:100px;
-} */
-
-.contents {
-  float: inline-end;
-  max-width: 960px;
-  width: 80%;
-  height: 600px;
-  border: groove 1px #999;
-  margin: 0px 0px 0px 0px;
+main {
+  min-height: 100vh;
+  display: flex;
+  margin-top: 10px;
+}
+.content {
+  flex: 1;
+  background-color: #eee;
   text-align: center;
 }
-footer {
-  clear: both;
+.localNavigation {
+  width: 300px;
   text-align: center;
-  border: dashed 1px #999;
+  background-color: #888;
+  color: #fff;
 }
-a {
-  font-weight: normal;
+/* 
+  ドロップダウンメニューの作り方
+  https://pc.chomemo.com/website/parts/drop_down_menu.php
+*/
+.nav_menubar ul {
+  list-style-type: none;
+  /* リストマークなし */
+  padding: 0;
+  /* リストマークの余白なし */
+}
+.nav_menubar {
+  display: none;
+}
+.menubar {
+  display: flex;
+  /* 要素をFlexboxに定義 */
+  justify-content: space-between;
+  /* 左寄せ配置 */
+  text-align: center;
+  /* テキストを中央寄せ */
+}
+.menubar li {
+  position: relative;
+  /* ボックスの配置基準 */
+  z-index: 1;
+  /* 前面に描画 */
+  min-width: 100px;
+  /* 親メニューの最小横幅 */
+}
+.menubar a {
+  display: block;
+  /* 要素をブロックに定義 */
   text-decoration: none;
+  /* リンク下線なし */
+  background-color: #FFEBCD;
+  /* 背景色 */
+  color: #696969;
+  /* テキスト色 */
+  padding: 10px;
+  /* 余白 */
 }
-a:link {
-  color: #0000FF;
+.menubar a:hover {
+  background-color: #DEB887;
+  /* リンク選択時の背景色 */
 }
-a:visited {
-  color: #6600FF;
+.menubar li ul {
+  /* 子メニュー */
+  position: absolute;
+  /* ボックスの配置基準 */
+  top: 100%;
+  /* 親メニュー上部からの表示位置 */
+  left: 0;
+  /* 親メニュー左端からの表示位置 */
+  width: 100%;
+  /* 親メニュー幅に合わせる */
 }
-a:hover {
-  color: #FF0099;
-  text-decoration: underline;
+.menubar li ul {
+  visibility: hidden;
+  opacity: 0;
+ transition: .0s ease-in-out;
 }
-a:active {
-  color: #33CC00;
+.menubar li:hover > ul {
+  visibility: visible;
+  opacity: 1;
 }
-p.line {
-  border-left: 2px solid #bebebe;
-  height: 120px;
+.menubar li ul li ul {
+  top: 0;/* 子メニュー上部からの表示位置 */
+  left: 100%;/* 子メニュー左端からの表示位置 */
 }
-#inlineframe {
-  float: left;
-  width: 19%;
-  height: 600px;
-  border: groove 1px #999;
-  margin: 0px 0px 0px 0px;
-  
+.menubar li:last-child ul li ul {/* 親メニュー最後のリストの孫表示は左側に表示 */
+  left: -100%;
 }
-
-.inlineframe li {
-  font-size: 1.2rem;
-  /* list-style-type:none; */
-  /* padding: 10px 10px 10px 30px; */
-}
-
-/* @media screen and (max-width: 768px){ */
-
 
 /*-- スマホ版表示CSS  --*/
 
 @media screen and (max-width: 768px) {
-  #inlineframe {
-    display: none;
-  }
   .pc_area {
     display: none;
   }
   .phone_area {
     display: block;
   }
-  .contents {
-    float: none;
-    width: auto;
-    max-width: 960px;
+  .nav_menubar {
+    display: block;
+  }
+  .localNavigation {
+    display: none;
+  }
+  main {
+    margin-top: 0px;
   }
 }

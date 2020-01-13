@@ -1,4 +1,4 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -12,54 +12,48 @@
 </head>
 
 <body>
-  <div id="wrap">
-    <header>
-      <h1>ヘッダー</h1>
-      <!-- 折りたたみ展開ボタン -->
-      <div onclick="obj=document.getElementById('menu1').style; obj.display=(obj.display=='none')?'block':'none';">
-        <a style="cursor:pointer;">▼ クリックで展開</a>
-      </div>
-      <!--// 折りたたみ展開ボタン -->
+  <header class="grovalNavigation">
+    <p>グローバルナビゲーション</p>
+  </header>
 
-      <!-- ここから先を折りたたむ -->
-      <div id="menu1" style="display:none;clear:both;">
-
-        <!--この部分が折りたたまれ、展開ボタンをクリックすることで展開します。-->
-        <p>aaaaaaaaaaa</p>
-      </div>
-      <!--// ここまでを折りたたむ -->
-    </header>
-    <!-- <div>
-      <p class="pc_area">PC表示です。</p>
-      <p class="phone_area">スマホ表示です。</p>
-    </div> -->
-    <nav>
-      <div>
-        <ul id="inlineframe">
-          <ul class="topmenu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">プロフィール</a></li>
-            <li><a href="#">車両のご案内</a></li>
-            <li><a href="#">ご利用事例</a></li>
-            <li><a href="#">よくある質問</a></li>
-            <li><a href="#">あああ</a></li>
-            <li><a href="#">リンク</a></li>
-          </ul>
+  <nav class="nav_menubar">
+    <ul class="menubar">
+    <li><a href="リンク先URL">メニュー1</a>
+      <ul>
+      <li><a href="リンク先URL">子メニュー1</a>
+      <li><a href="リンク先URL">子メニュー2</a>
+        <ul>
+        <li><a href="リンク先URL">孫メニュー1</a>
+        <li><a href="リンク先URL">孫メニュー2</a>
         </ul>
-      </div>
+      </ul>
+    <li><a href="リンク先URL">メニュー2</a>
+      <ul>
+      <li><a href="リンク先URL">子メニュー3</a>
+        <ul>
+        <li><a href="リンク先URL">孫メニュー3</a>
+        <li><a href="リンク先URL">孫メニュー4</a>
+        </ul>
+      <li><a href="リンク先URL">子メニュー4</a>
+      </ul>
+    <li><a href="リンク先URL">メニュー3</a>
+      <ul>
+      <li><a href="リンク先URL">子メニュー5</a>
+      <li><a href="リンク先URL">子メニュー6</a>
+        <ul>
+        <li><a href="リンク先URL">孫メニュー5</a>
+        <li><a href="リンク先URL">孫メニュー6</a>
+        </ul>
+      </ul>
+    </ul>
     </nav>
-    <article>
-      <section>
-        <div class="contents">
-          <h2>コンテンツ</h2>
-        </div>
-      </section>
-    </article>
 
-    <footer>
-      <h2>フッター</h2>
-    </footer>
-  </div>
+  <main>
+    <div class="localNavigation">
+      <p>ローカルナビゲーション</p>
+    </div>
+    <div class="content">
+      <p>コンテンツ</p>
+    </div>
+  </main>
 </body>
-
-</html>
