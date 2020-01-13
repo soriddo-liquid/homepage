@@ -15,7 +15,19 @@
   <div id="wrap">
     <header>
       <h1>ヘッダー</h1>
+      <!-- 折りたたみ展開ボタン -->
+      <div onclick="obj=document.getElementById('menu1').style; obj.display=(obj.display=='none')?'block':'none';">
+        <a style="cursor:pointer;">▼ クリックで展開</a>
+      </div>
+      <!--// 折りたたみ展開ボタン -->
 
+      <!-- ここから先を折りたたむ -->
+      <div id="menu1" style="display:none;clear:both;">
+
+        <!--この部分が折りたたまれ、展開ボタンをクリックすることで展開します。-->
+        <p>aaaaaaaaaaa</p>
+      </div>
+      <!--// ここまでを折りたたむ -->
     </header>
     <!-- <div>
       <p class="pc_area">PC表示です。</p>
@@ -38,7 +50,7 @@
     </nav>
     <article>
       <section>
-        <div id="contents">
+        <div class="contents">
           <h2>コンテンツ</h2>
         </div>
       </section>
