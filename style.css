@@ -1,32 +1,131 @@
-body {
-  background: #EEEEEE;
+article, aside, details, figcaption, figure, header, hgroup, menu, nav, section {
+  display: block;
 }
- 
+* { 
+  margin: 0px; 
+  padding: 0px; 
+}
+#wrap {
+  /* width: 960px; */
+  margin: 0px auto;
+  /* background-color:#000000; */
+}
+
 header {
-  background: #0000FF;
+  border: dashed 1px #999;
+  height:100px;
 }
- 
-main {
-  background: #00EE00;
-  margin: 0 auto;
-  /* width: 600px; */
-  width: 300px;
-}
-#column1 {
-  background: #00EEEE;
+
+#sidenavi {
   float: left;
-  /* width: 100px; */
-  width: 50px;
+  width: 198px;
+  height: 498px;
+  border: dashed 1px #999;
+  margin: 0px 0px 0px 0px;
 }
-   
-#column2 {
-  background: #EEEE00;
+
+#contents {
   float: left;
-  /* width: 500px; */
-  width: 100px;
+  width: 748px;
+  height: 498px;
+  border: dashed 1px #999;
+  margin: 0px 0px 0px 0px;
 }
- 
+
 footer {
   clear: both;
-  background: #EE0000;
+  border: dashed 1px #999;
+}
+
+a {
+  font-weight: normal;
+  text-decoration: none;
+}
+
+a:link {
+  color: #0000FF;
+}
+
+a:visited {
+  color: #6600FF;
+}
+
+a:hover {
+  color: #FF0099;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #33CC00;
+}
+
+#center {
+  text-align: center;
+  float: right;
+}
+
+#margin_a {
+  margin-left: 210px;
+}
+
+#margin_b {
+  margin-left: 200px;
+}
+
+#margin_c {
+  margin-left: 218px;
+}
+
+#margin_d {
+  margin-left: 244px;
+}
+
+#size1 {
+  font-size: 8px;
+}
+
+TD#WID_A {
+  WIDTH: 160px;
+}
+
+#WID_B {
+  WIDTH: 700px;
+}
+
+TD {
+  font-size: 10pt;
+}
+
+#left {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 220px;
+  height: 100%;
+  text-align: center;
+}
+
+#right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 220px;
+  height: 100%;
+  border-left: 2px solid #ccc;
+}
+p.line { 
+  border-left: 2px solid #bebebe; height: 120px;
+}
+.inlineframe {
+  float: left;
+ /* background-color:#FFFFFF; */
+ width: 160px;
+ height:600px;
+ /* height: 100vh; */
+ overflow:auto;
+ overflow-y:scroll;
+ overflow-x:hidden;
+}
+.inlineframe li{
+  font-size: 1.9em;
 }
