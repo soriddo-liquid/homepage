@@ -54,20 +54,42 @@ main {
 
 /*アイコンのスペース*/
 #nav-open {
-  display: inline-block;
-  width: 30px;
-  /* height: 22px; */
-  vertical-align: middle;
+  display: table;
 }
-#nav-open menu{
-  width: 60px;
-  height: 60px;
+/* #nav-open menu{
+  width: 80px;
+  height: 50px;
   box-sizing: content-box;
   border-radius: 3px;
   background: #87eec3;
-  display: block;
   content: '';
+  text-align: center;
   cursor: pointer;
+  display: table;
+} */
+#nav-open menu{
+  position: relative;
+  display: table;
+  width: 90px;
+  height: 60px;
+  text-decoration: none;
+  color: #FFF;
+  background: #fd9535;/*背景色*/
+  border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+  text-align: center;
+  
+}
+#nav-open menu p{
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.2em;
+}
+#nav-open menu:active{
+  border-bottom: solid 2px #fd9535;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
 }
 #nav-open span, #nav-open span:before, #nav-open span:after {
   position: absolute;
