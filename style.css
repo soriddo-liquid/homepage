@@ -47,9 +47,9 @@ main {
   text-align: center;
   background-color: #888;
   color: #fff;
-  border-top: solid;
+  /* border-top: solid; */
   border-right: solid;
-  border-bottom: solid;
+  /* border-bottom: solid; */
   border-color: #555555;
 }
 .localNavigation ul {
@@ -65,7 +65,8 @@ main {
 	padding: 30px;
 	text-decoration: none;
 	color: #ffffff;
-	border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  font-size: 1.1em;
 }
 .lclNavBox{
   /* メニューの一番上 */
@@ -219,7 +220,16 @@ footer {
   height: 20px;
   text-align: center;
   font-size: 0.85em;
+  border: 1px solid transparent;
   background-color: #dddddd;
+}
+hr{
+  color:#a8a8a8; 
+  background-color:#a8a8a8; 
+  border: 0;
+  margin: auto;
+  height:1px;
+  width: 80%;
 }
 
 /*-- スマホ版表示CSS  --*/
