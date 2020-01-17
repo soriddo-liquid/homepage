@@ -16,15 +16,23 @@ body {
   flex-direction: column;
 }
 .grovalNavigation {
-  height: 70px;
-  text-align: center;
+  width: 100%;
+  height: 120px;
   background-color: #888;
   color: #fff;
+}
+.grovalNavigation p{
+  text-align: left;
+  height: 100%;
+  /* padding: 4%; */
+  padding: 45px;
+  font-size: 1.8em;
 }
 main {
   min-height: 100vh;
   display: flex;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .content {
   flex: 1;
@@ -32,14 +40,145 @@ main {
   text-align: center;
   height: 700px;
 }
+/* ローカルナビゲーション関連 */
 .localNavigation {
-  width: 300px;
+  width: 200px;
   height: 700px;
   text-align: center;
   background-color: #888;
   color: #fff;
+  border-top: solid;
+  border-right: solid;
+  border-bottom: solid;
+  border-color: #555555;
+}
+.localNavigation ul {
+	margin: 0;
+	padding: 0;
+}
+.localNavigation li {
+	list-style: none;
+}
+.localNavigation li a {
+  /* メニューのリストの設定 */
+	display: block;
+	padding: 30px;
+	text-decoration: none;
+	color: #ffffff;
+	border-bottom: 1px solid #ffffff;
+}
+.lclNavBox{
+  /* メニューの一番上 */
+  display: table;
+  background-color: #a9f1b2;
+  z-index: 19999;
+  /*最前面に*/
+  width: 100%;
+  height: 80px;
+}
+.lclNavBox p{
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.5em;
+  text-align: center;
+  color: #000000;
+}
+
+#nav-close{
+  display: none;
+  /*はじめは隠しておく*/
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  /*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+#cp_toggle01:checked~#nav-close {
+  display: block;
+  /*カバーを表示*/
+  opacity: .5;
+}
+
+#cp_toggle02:checked~#nav-close {
+  display: none;
+  /*カバーを表示*/
+  opacity: 0;
+}
+/*チェックボックス等は非表示に*/
+
+.nav-unshown {
+  display: none;
+}
+/*
+  クリックすると右からメニューが出てくる
+  https://copypet.jp/codedescription/2004/
+*/
+
+*, *:before, *:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+ol, ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+.cp_offcm01 {
+  /* メニューアイコンの位置（余白調整） */
+	position: absolute;
+	top: 30px;
+  left: 20px;
+	display: inline-block;
+}
+/* menu */
+.cp_offcm01 .cp_menu {
+  /* 横から出るボックスの設定 */
+	position: fixed;
+	top: 0;
+	left: -100vw;
+	width: 250px;
+	height: 100%;
+	/* cursor: pointer; */
+	-webkit-transition: 0.53s transform;
+	        transition: 0.53s transform;
+	background-color: #607D8B;
+	opacity: 1.0;
+}
+.cp_offcm01 .cp_menu ul {
+	margin: 0;
+	padding: 0;
+}
+.cp_offcm01 .cp_menu li {
+	list-style: none;
+}
+.cp_offcm01 .cp_menu li a {
+  /* メニューのリストの設定 */
+	display: block;
+	padding: 20px;
+	text-decoration: none;
+	color: #ffffff;
+	border-bottom: 1px solid #ffffff;
+}
+.cp_offcm01 #cp_toggle01 {
+	position: absolute;
+	display: none;
+	opacity: 0;
+}
+.cp_offcm01 #cp_toggle01:checked ~ .cp_menu {
+	-webkit-transform: translateX(100vw);
+	        transform: translateX(100vw);
 }
 .navbox {
+  /* メニューの一番上 */
   display: table;
   background-color: #fd9535;
   z-index: 19999;
@@ -53,204 +192,34 @@ main {
   font-size: 1.5em;
   text-align: center;
 }
-
-/*
-  ハンバーガーアイコンをCSSだけで表現
-  https://saruwakakun.com/html-css/reference/nav-drawer
-*/
-
-#nav-drawer {
-  position: relative;
+/* menu toggle */
+.cp_offcm01 #cp_toggle01 ~ label {
+  border: solid;
+	display: block;
+	padding: 0.5em;
+	cursor: pointer;
+	text-align: center;
+	color: #333333;
 }
-
-/*チェックボックス等は非表示に*/
-
-.nav-unshown {
-  display: none;
+.cp_offcm01 #cp_toggle01:checked ~ label {
+  z-index: 0;
 }
-
-/*アイコンのスペース*/
-
-#nav-open {
-  display: table;
-}
-
-/* #nav-open menu{
-  width: 80px;
+.cp_offcm01 label{
+  /* メニューボタンの大きさ */
+  width: 50px;
   height: 50px;
-  box-sizing: content-box;
-  border-radius: 3px;
-  background: #87eec3;
-  content: '';
-  text-align: center;
-  cursor: pointer;
-  display: table;
-} */
-
-#nav-open menu {
-  position: relative;
-  display: table;
-  width: 90px;
-  height: 60px;
-  text-decoration: none;
-  color: #FFF;
-  background: #fd9535;
-  /*背景色*/
-  border-bottom: solid 2px #d27d00;
-  /*少し濃い目の色に*/
-  border-radius: 4px;
-  /*角の丸み*/
-  box-shadow: inset 0 2px 0 #ffffff33, 0 2px 2px rgba(0, 0, 0, 0.19);
-  font-weight: bold;
-  text-align: center;
 }
-#nav-open menu p {
-  display: table-cell;
-  vertical-align: middle;
-  font-size: 1.2em;
-}
-#nav-open menu:active {
-  border-bottom: solid 2px #fd9535;
-  box-shadow: 0 0 2px #0000004d;
-}
-#nav-open span, #nav-open span:before, #nav-open span:after {
-  position: absolute;
-  height: 4px;
-  /*線の太さ*/
-  width: 25px;
-  /*長さ*/
-  border-radius: 3px;
-  background: #555;
-  display: block;
-  content: '';
-  cursor: pointer;
-}
-#nav-open span:before {
-  bottom: -8px;
-}
-#nav-open span:after {
-  bottom: -16px;
-}
-
-/*閉じる用の薄黒カバー*/
-
-#nav-close {
-  display: none;
-  /*はじめは隠しておく*/
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  /*全体に広がるように*/
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  opacity: 0;
-  transition: .3s ease-in-out;
-}
-
-/*中身*/
-
-#nav-content {
-  display: table;
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  /*最前面に*/
-  width: 60%;
-  /*右側に隙間を作る（閉じるカバーを表示）*/
-  max-width: 330px;
-  /*最大幅（調整してください）*/
-  height: 100%;
-  background: #fff;
-  /*背景色*/
-  transition: .3s;
-  /*滑らかに表示*/
-  -webkit-transform: translateX(-105%);
-  transform: translateX(-105%);
-  /*左に隠しておく*/
-}
-#nav-content li {
-  text-align: center;
-  list-style-type: none;
-}
-.grovalNavigation {
-  height: 70px;
-  text-align: center;
-  background-color: #888;
-  color: #fff;
-}
-
-/*チェックが入ったらもろもろ表示*/
-
-#nav-input:checked~#nav-close {
-  display: block;
-  /*カバーを表示*/
-  opacity: .5;
-}
-#nav-input:checked~#nav-content {
-  -webkit-transform: translateX(0%);
-  /*中身を表示（右へスライド）*/
-  transform: translateX(0%);
-  box-shadow: 6px 0 25px rgba(0, 0, 0, .15);
+/* contents */
+.cp_contents {
+	color: #333333;
+	text-align: center;
 }
 footer {
   clear: both;
   height: 20px;
   text-align: center;
   font-size: 0.85em;
-}
-
-/* 
-  CSSで一定時間(数秒間)、表示した後に自動で非表示する
-  https://morizyun.github.io/web/css-hide-few-sec.html
-*/
-
-.flash-title {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: table;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  -webkit-animation: fade-in-out 0.3s 0s forwards;
-  animation: fade-in-out 0.3s 0s forwards;
-  visibility: hidden;
-  z-index: 999999;
-}
-.flash-title p {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  font-size: 90px;
-  color: #fff;
-}
-@-webkit-keyframes fade-in-out {
-  from {
-    width: 100vh;
-    width: 300%
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-@keyframes fade-in-out {
-  100% {
-    visibility: hidden;
-    opacity: 0;
-  }
-  50% {
-    visibility: visible;
-    opacity: 1;
-  }
-  0% {
-    visibility: hidden;
-    opacity: 1;
-  }
+  background-color: #dddddd;
 }
 
 /*-- スマホ版表示CSS  --*/
@@ -264,5 +233,9 @@ footer {
   }
   main {
     margin-top: 0px;
+  }
+  .grovalNavigation p{
+    text-align: center;
+    font-size: 1.4em;
   }
 }
