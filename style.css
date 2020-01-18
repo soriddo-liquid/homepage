@@ -14,6 +14,8 @@ article, aside, details, figcaption, figure, header, hgroup, menu, nav, section 
 body {
   display: flex;
   flex-direction: column;
+  margin: auto;
+  max-width: 960px;
 }
 .grovalNavigation {
   width: 100%;
@@ -38,12 +40,14 @@ main {
   flex: 1;
   background-color: #eee;
   text-align: center;
-  height: 700px;
+  min-height: 100vh;
+  /* height: 500px; */
 }
 /* ローカルナビゲーション関連 */
 .localNavigation {
   width: 200px;
-  height: 700px;
+  min-height: 100vh;
+  /* height: 500px; */
   text-align: center;
   background-color: #888;
   color: #fff;
@@ -62,16 +66,19 @@ main {
 .localNavigation li a {
   /* メニューのリストの設定 */
 	display: block;
-	padding: 30px;
+	padding: 20px;
 	text-decoration: none;
 	color: #ffffff;
   border-bottom: 1px solid #ffffff;
   font-size: 1.1em;
 }
+.localNavigation li a:hover{
+  background-color: #439fdb;
+}
 .lclNavBox{
   /* メニューの一番上 */
   display: table;
-  background-color: #a9f1b2;
+  background-color: #81f591;
   z-index: 19999;
   /*最前面に*/
   width: 100%;
