@@ -35,25 +35,25 @@ main {
   display: flex;
   margin-top: 10px;
   margin-bottom: 10px;
+  width: auto;
 }
 .content {
   flex: 1;
   background-color: #eee;
   text-align: center;
   min-height: 100vh;
-  /* height: 500px; */
+}
+.content .marginOn{
+  padding: 15px;
 }
 /* ローカルナビゲーション関連 */
 .localNavigation {
   width: 200px;
   min-height: 100vh;
-  /* height: 500px; */
   text-align: center;
   background-color: #888;
   color: #fff;
-  /* border-top: solid; */
   border-right: solid;
-  /* border-bottom: solid; */
   border-color: #555555;
 }
 .localNavigation ul {
@@ -87,7 +87,7 @@ main {
 .lclNavBox p{
   display: table-cell;
   vertical-align: middle;
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: center;
   color: #000000;
 }
@@ -203,27 +203,34 @@ a {
 /* メニューボタン*/
 .cp_offcm01 label{
   /* メニューボタンの大きさ */
-  width: 50px;
-  height: 50px;
-  background-color: #439fdb;
+  width: 60px;
+  height: 60px;
+  background-color: #ccddf1;
   color: #333333;
   text-align: center;
+}
+.cp_offcm01 label:hover{
+  background-color: #3d8eeb;
 }
 .cp_offcm01 #cp_toggle01 ~ label {
 	display: block;
 	padding: 0.5em;
-	cursor: pointer;
+  cursor: pointer;
 	text-align: center;
   color: #333333;
+  
+  /* border-radius: 15px; */
 }
 .cp_offcm01 #cp_toggle01:checked ~ label {
   z-index: 0;
   border: none;
+  border-radius: 0px;
 }
-/* contents */
-.cp_contents {
-	color: #333333;
-	text-align: center;
+label > p{
+  position: relative;
+  left: -3px;
+  margin-top: 10px;
+  font-size: 1.2em;
 }
 footer {
   clear: both;
@@ -240,6 +247,10 @@ hr{
   margin: auto;
   height:1px;
   width: 80%;
+}
+.topimage img{
+  max-width: 100%;
+  padding: 15px;
 }
 
 /*-- スマホ版表示CSS  --*/
