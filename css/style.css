@@ -295,7 +295,6 @@ a {
 label > p{
   display: table-cell;
   position: relative;
-  left: -3px;
   margin-top: 10px;
   font-size: 1.2em;
 }
