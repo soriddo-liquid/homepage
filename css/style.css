@@ -28,6 +28,7 @@ body {
   height: 100%;
   /* padding: 4%; */
   padding: 45px;
+  padding-right: 15px;
   font-size: 1.8em;
 }
 main {
@@ -267,6 +268,7 @@ a {
 /* メニューボタン*/
 .cp_offcm01 label{
   /* メニューボタンの大きさ */
+  display: table;
   width: 60px;
   height: 60px;
   background-color: #ccddf1;
@@ -291,6 +293,7 @@ a {
   border-radius: 0px;
 }
 label > p{
+  display: table-cell;
   position: relative;
   left: -3px;
   margin-top: 10px;
