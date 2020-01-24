@@ -3,6 +3,7 @@
   background-color: #eee;
   text-align: center;
   min-height: 100vh;
+  width: 100%;
 }
 .content .marginOn{
   padding: 15px;

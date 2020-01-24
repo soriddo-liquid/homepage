@@ -15,6 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: auto;
+  flex: 3;
   max-width: 960px;
 }
 .grovalNavigation {
@@ -23,32 +24,38 @@ body {
   background-color: #888;
   color: #fff;
 }
-.grovalNavigation p{
+.grovalNavigation p {
   text-align: left;
   height: 100%;
-  /* padding: 4%; */
   padding: 45px;
-  padding-right: 15px;
+  padding-right: 25px;
   font-size: 1.8em;
 }
 main {
   min-height: 100vh;
   display: flex;
-  margin-top: 10px;
   margin-bottom: 10px;
   width: auto;
 }
 .content {
-  order:3;
+  order: 3;
   background-color: #eee;
   text-align: center;
   min-height: 100vh;
 }
+article {
+  display: flex;
+  order: 66;
+  width: 100%;
+}
+
 /* ローカルナビゲーション関連 */
+
 .localNavigation {
-  order:2;
+  order: 2;
   width: 200px;
   min-height: 100vh;
+  height: 100%;
   text-align: center;
   background-color: #888;
   color: #fff;
@@ -56,25 +63,25 @@ main {
   border-color: #555555;
 }
 .localNavigation ul {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .localNavigation li {
-	list-style: none;
+  list-style: none;
 }
 .localNavigation li a {
   /* メニューのリストの設定 */
-	display: block;
-	padding: 20px;
-	text-decoration: none;
-	color: #ffffff;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: #ffffff;
   border-bottom: 1px solid #ffffff;
   font-size: 1.1em;
 }
-.localNavigation li a:hover{
+.localNavigation li a:hover {
   background-color: #439fdb;
 }
-.lclNavBox{
+.lclNavBox {
   /* メニューの一番上 */
   display: table;
   background-color: #81f591;
@@ -83,15 +90,14 @@ main {
   width: 100%;
   height: 80px;
 }
-.lclNavBox p{
+.lclNavBox p {
   display: table-cell;
   vertical-align: middle;
   font-size: 1.2em;
   text-align: center;
   color: #000000;
 }
-
-#nav-close{
+#nav-close {
   display: none;
   /*はじめは隠しておく*/
   position: fixed;
@@ -105,20 +111,18 @@ main {
   opacity: 0;
   transition: .3s ease-in-out;
 }
-
 #cp_toggle01:checked~#nav-close {
   display: block;
   /*カバーを表示*/
   opacity: .5;
 }
-
 #cp_toggle02:checked~#nav-close {
   display: none;
   /*カバーを表示*/
   opacity: 0;
 }
-/*チェックボックス等は非表示に*/
 
+/*チェックボックス等は非表示に*/
 .nav-unshown {
   display: none;
 }
@@ -129,61 +133,63 @@ main {
 */
 
 *, *:before, *:after {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 .cp_offcm01 {
   /* メニューアイコンの位置（余白調整） */
-	position: absolute;
-	top: 30px;
+  position: absolute;
+  top: 30px;
   left: 20px;
   display: inline-block;
 }
+
 /* menu */
+
 .cp_offcm01 .cp_menu {
   /* 横から出るボックスの設定 */
-	position: fixed;
-	top: 0;
-	left: -100vw;
-	width: 250px;
-	height: 100%;
-	/* cursor: pointer; */
-	-webkit-transition: 0.53s transform;
-	        transition: 0.53s transform;
-	background-color: #888;
-	opacity: 1.0;
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 250px;
+  height: 100%;
+  /* cursor: pointer; */
+  -webkit-transition: 0.53s transform;
+  transition: 0.53s transform;
+  background-color: #888;
+  opacity: 1.0;
 }
 .cp_offcm01 .cp_menu ul {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .cp_offcm01 .cp_menu li {
-	list-style: none;
+  list-style: none;
 }
 .cp_offcm01 .cp_menu li a {
   /* メニューのリストの設定 */
-	display: block;
-	padding: 20px;
-	text-decoration: none;
-	color: #ffffff;
-	border-bottom: 1px solid #ffffff;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
 .cp_offcm01 #cp_toggle01 {
-	position: absolute;
-	display: none;
-	opacity: 0;
+  position: absolute;
+  display: none;
+  opacity: 0;
 }
-.cp_offcm01 #cp_toggle01:checked ~ .cp_menu {
-	-webkit-transform: translateX(100vw);
-	        transform: translateX(100vw);
+.cp_offcm01 #cp_toggle01:checked~.cp_menu {
+  -webkit-transform: translateX(100vw);
+  transform: translateX(100vw);
 }
 .navbox {
   /* メニューの一番上 */
@@ -200,8 +206,10 @@ a {
   font-size: 1.5em;
   text-align: center;
 }
+
 /* メニューボタン*/
-.cp_offcm01 label{
+
+.cp_offcm01 label {
   /* メニューボタンの大きさ */
   display: table;
   width: 60px;
@@ -210,24 +218,23 @@ a {
   color: #333333;
   text-align: center;
 }
-.cp_offcm01 label:hover{
+.cp_offcm01 label:hover {
   background-color: #3d8eeb;
 }
-.cp_offcm01 #cp_toggle01 ~ label {
-	display: block;
-	padding: 0.5em;
+.cp_offcm01 #cp_toggle01~label {
+  display: block;
+  padding: 0.5em;
   cursor: pointer;
-	text-align: center;
+  text-align: center;
   color: #333333;
-  
   /* border-radius: 15px; */
 }
-.cp_offcm01 #cp_toggle01:checked ~ label {
+.cp_offcm01 #cp_toggle01:checked~label {
   z-index: 0;
   border: none;
   border-radius: 0px;
 }
-label > p{
+label>p {
   display: table-cell;
   text-align: center;
   right: 2px;
@@ -235,25 +242,69 @@ label > p{
   margin-top: 10px;
   font-size: 1.2em;
 }
+hr {
+  color: #a8a8a8;
+  background-color: #a8a8a8;
+  border: 0;
+  margin: auto;
+  height: 1px;
+  width: 80%;
+}
 
 /*フッター*/
+
 footer {
   clear: both;
   height: 20px;
   text-align: center;
   font-size: 0.85em;
   border: 1px solid transparent;
-  background-color: #dddddd;
+  background-color: #b9ddfd;
 }
-hr{
-  color:#a8a8a8; 
-  background-color:#a8a8a8; 
-  border: 0;
-  margin: auto;
-  height:1px;
-  width: 80%;
+footer img {
+  vertical-align: text-bottom;
+  width: 20px;
+}
+footer a:hover {
+  color: #81b3f5;
+  text-decoration: underline;
+}
+/*
+  パンくずリストとは？
+  https://saruwakakun.com/html-css/basic/breadcrumb#section1
+*/
+.breadcrumb {
+  padding-left:10px;
+  margin-left:0;
+  background-color: #696969;
+  height: 20px;
 }
 
+.breadcrumb li{
+  display:inline;/*横に並ぶように*/
+  list-style: none;
+  font-weight: bold;
+}
+
+.breadcrumb li:after {/* >を表示*/
+  content: '>';
+  padding: 0 3px;
+  color: #ffffff;
+}
+
+.breadcrumb li:last-child:after {
+  content: '';
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: #d6d6d6;/*色*/
+}
+
+.breadcrumb li a:hover {
+  color: #b9e4fd;
+  text-decoration: underline;
+}
 /*-- スマホ版表示CSS  --*/
 
 @media screen and (max-width: 768px) {
@@ -266,12 +317,18 @@ hr{
   main {
     margin-top: 0px;
   }
-  .grovalNavigation p{
+  .grovalNavigation p {
     text-align: right;
-    font-size: 1.4em;
+    font-size: 1.8em;
     margin-left: 30px;
   }
   .content {
     order: 0;
+  }
+  article{
+    order: 0;
+  }
+  footer{
+    height: 40px;
   }
 }
