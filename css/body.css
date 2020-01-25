@@ -38,10 +38,16 @@ main {
   width: auto;
 }
 .content {
+  flex: 1;
   order: 3;
   background-color: #eee;
   text-align: center;
   min-height: 100vh;
+  width: 100%;
+  padding: 30px;
+}
+.content .marginOn{
+  padding: 15px;
 }
 article {
   display: flex;
@@ -203,7 +209,7 @@ a {
 .navbox p {
   display: table-cell;
   vertical-align: middle;
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: center;
 }
 
@@ -284,6 +290,7 @@ footer a:hover {
   display:inline;/*横に並ぶように*/
   list-style: none;
   font-weight: bold;
+  color: #fafafa;
 }
 
 .breadcrumb li:after {/* >を表示*/
@@ -319,11 +326,12 @@ footer a:hover {
   }
   .grovalNavigation p {
     text-align: right;
-    font-size: 1.8em;
+    font-size: 1.2em;
     margin-left: 30px;
   }
   .content {
     order: 0;
+    padding: 10px;
   }
   article{
     order: 0;
