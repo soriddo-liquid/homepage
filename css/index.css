@@ -1,3 +1,13 @@
+/* override */
+.breadcrumb {
+  height: 10px;
+}
+.redAndPad10{
+  font-size: 1.1em;
+  color: #df2b2b;
+  padding: 10px;
+}
+
 /*
   スライドショー
   https://lopan.jp/css-animation-slideshow/
@@ -25,6 +35,7 @@
   padding: 0 50px;
   box-sizing: border-box;
   vertical-align: middle;
+  /* object-fit: cover; */
 }
 
 /* :::::: mechanism :::::: */

@@ -253,6 +253,7 @@ hr {
   background-color: #a8a8a8;
   border: 0;
   margin: auto;
+  margin-top: 10px;
   height: 1px;
   width: 80%;
 }
@@ -283,7 +284,7 @@ footer a:hover {
   padding-left:10px;
   margin-left:0;
   background-color: #696969;
-  height: 20px;
+  height: auto;
 }
 
 .breadcrumb li{
