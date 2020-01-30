@@ -11,12 +11,16 @@ article, aside, details, figcaption, figure, header, hgroup, menu, nav, section 
 .phone_area {
   display: none;
 }
+.ie_Only{
+  display: none;
+}
 body {
   display: flex;
   flex-direction: column;
   margin: auto;
   flex: 3;
   max-width: 960px;
+  font-family:"ＭＳ Ｐゴシック", "MS PGothic", "メイリオ", Meiryo, Osaka,sans-serif;
 }
 .grovalNavigation {
   width: 100%;
@@ -313,6 +317,7 @@ footer a:hover {
   color: #b9e4fd;
   text-decoration: underline;
 }
+
 /*-- スマホ版表示CSS  --*/
 
 @media screen and (max-width: 768px) {
@@ -340,4 +345,22 @@ footer a:hover {
   footer{
     height: 40px;
   }
+  /* IE11 */
+  _:-ms-lang(x)::-ms-backdrop,
+  .phone_area{
+    display: none;
+  }
+  _:-ms-lang(x)::-ms-backdrop,
+  .grovalNavigation p{
+    text-align: left;
+    font-size: 1.4em;
+  }
+  _:-ms-lang(x)::-ms-backdrop,
+  .localNavigation{
+    display: none;
+  }
 }
+_:-ms-lang(x)::-ms-backdrop,
+  .ie_Only{
+    display: block;
+  }

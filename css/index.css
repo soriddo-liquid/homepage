@@ -72,3 +72,12 @@
 .slideContents #slide5 {
   animation-delay: -6s;
 }
+/* 
+  ブラウザ別に適用させるCSSハック2018
+  https://kuroko-role.co.jp/css-html/browser-hack2018/
+*/
+/* IE11 */
+_:-ms-lang(x)::-ms-backdrop,
+.slideshow {
+    display: none;
+}
