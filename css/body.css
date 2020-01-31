@@ -10,6 +10,15 @@ section{
   margin: 0px;
   padding: 0px;
 }
+a{
+  color: #000000;
+}
+a:hover {
+  color: #439fdb;
+}
+a:active{
+  color: #435fdb;
+}
 .pc_area {
   display: block;
 }
@@ -144,6 +153,7 @@ article {
 
 /*
   クリックすると右からメニューが出てくる
+  （他サイトのコードとミックス）
   https://copypet.jp/codedescription/2004/
 */
 
