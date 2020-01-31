@@ -8,6 +8,7 @@
 .flex>* {
   /* min-width: 8%; */
   max-width: 320px;
+  max-height: 240px;
   width: 100%;
   height: auto;
   flex-basis: 100%;
