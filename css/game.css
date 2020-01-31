@@ -1,3 +1,8 @@
+section{
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
 .flex {
   display: flex;
   /* flex-direction: row; */
@@ -20,24 +25,28 @@
   /* border: 1px solid #aaa; */
   margin: 10px;
 }
+_:-ms-lang(x)::-ms-backdrop,
+.flex{
+  display: inline-block;
+}
 
 /* 
   CSSでマウスホバー時に文字列を表示するエフェクト
   http://blog.raizzenet.com/mouse-hover-caption-effects-in-css/#i-sample1
 */
 
-.sample1 {
+.gameList {
   overflow: hidden;
   position: relative;
   /* 相対位置指定 */
 }
-.sample1 .caption {
+.gameList .caption {
   font-size: 1.2em;
   text-align: center;
   padding-top: 40px;
   color: #fff;
 }
-.sample1 .mask {
+.gameList .mask {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -51,7 +60,7 @@
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.sample1:hover .mask {
+.gameList:hover .mask {
   opacity: 1;
   /* マスクを表示する */
 }
@@ -60,7 +69,7 @@
   width: 100%;
   height: 100%;
 }
-.sample1 img {
+.gameList img {
   max-width: 100%;
   height: 100%;
 }

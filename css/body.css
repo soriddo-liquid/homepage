@@ -1,6 +1,11 @@
 article, aside, details, figcaption, figure, header, hgroup, menu, nav, section {
   display: block;
 }
+section{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -258,6 +263,7 @@ hr {
   border: 0;
   margin: auto;
   margin-top: 10px;
+  margin-bottom: 10px;
   height: 1px;
   width: 80%;
 }
@@ -284,36 +290,36 @@ footer a:hover {
   パンくずリストとは？
   https://saruwakakun.com/html-css/basic/breadcrumb#section1
 */
-.breadcrumb {
+.breadcrumbs {
   padding-left:10px;
   margin-left:0;
   background-color: #696969;
   height: auto;
 }
 
-.breadcrumb li{
+.breadcrumbs li{
   display:inline;/*横に並ぶように*/
   list-style: none;
   font-weight: bold;
   color: #fafafa;
 }
 
-.breadcrumb li:after {/* >を表示*/
+.breadcrumbs li:after {/* >を表示*/
   content: '>';
   padding: 0 3px;
   color: #ffffff;
 }
 
-.breadcrumb li:last-child:after {
+.breadcrumbs li:last-child:after {
   content: '';
 }
 
-.breadcrumb li a {
+.breadcrumbs li a {
   text-decoration: none;
   color: #d6d6d6;/*色*/
 }
 
-.breadcrumb li a:hover {
+.breadcrumbs li a:hover {
   color: #b9e4fd;
   text-decoration: underline;
 }
@@ -362,5 +368,9 @@ footer a:hover {
 }
 _:-ms-lang(x)::-ms-backdrop,
   .ie_Only{
+    display: block;
+  }
+  _:-ms-lang(x)::-ms-backdrop,
+  section{
     display: block;
   }

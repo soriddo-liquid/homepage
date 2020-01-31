@@ -1,11 +1,26 @@
 /* override */
-.breadcrumb {
+.breadcrumbs {
   height: 10px;
 }
-.redAndPad10{
-  font-size: 1.1em;
-  color: #df2b2b;
+
+.a1{
+  padding: 30px;
+}
+.a1 p{
+  padding-bottom: 10px;
+}
+.a1 a{
+  text-decoration: underline;
+}
+.a1 a:hover{
+  color: #81b3f5;
+  
+}
+.zone_pad10px{
   padding: 10px;
+}
+p.author{
+  font-size: 1.8em;
 }
 
 /*
@@ -80,4 +95,9 @@
 _:-ms-lang(x)::-ms-backdrop,
 .slideshow {
     display: none;
+}
+.redAndPad10{
+  font-size: 1.1em;
+  color: #df2b2b;
+  padding: 10px;
 }
