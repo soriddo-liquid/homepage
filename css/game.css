@@ -1,33 +1,30 @@
 section{
   display: flex;
-  /* overflow: hidden; */
   position: relative;
 }
 .flex {
   display: flex;
-  /* flex-direction: row; */
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /* border: 1px solid #aaa; */
 }
 .flex>* {
-  /* min-width: 8%; */
   max-width: 320px;
   max-height: 240px;
   width: 100%;
   height: auto;
   flex-basis: 100%;
   background: #fff;
-  /* font-size: 64px; */
   text-align: center;
 }
 .flex, .flex>* {
-  /* border: 1px solid #aaa; */
   margin: 10px;
 }
 _:-ms-lang(x)::-ms-backdrop,
 .flex{
   display: inline-block;
+}
+.box p{
+  padding-top: 15px;
 }
 
 /* 
