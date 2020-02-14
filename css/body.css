@@ -1,7 +1,7 @@
 article, aside, details, figcaption, figure, header, hgroup, menu, nav, section {
   display: block;
 }
-section{
+section {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -9,9 +9,8 @@ section{
 * {
   margin: 0px;
   padding: 0px;
-  
 }
-a{
+a {
   color: #000000;
   text-decoration: underline;
 }
@@ -19,7 +18,7 @@ a:hover {
   color: #439fdb;
   text-decoration: underline;
 }
-a:active{
+a:active {
   color: #435fdb;
 }
 .pc_area {
@@ -28,7 +27,7 @@ a:active{
 .phone_area {
   display: none;
 }
-.ie_Only{
+.ie_Only {
   display: none;
 }
 body {
@@ -37,12 +36,11 @@ body {
   margin: auto;
   flex: 3;
   max-width: 960px;
-  font-family:"ＭＳ Ｐゴシック", "MS PGothic", "メイリオ", Meiryo, Osaka,sans-serif;
-  background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9edff 3px, #e9edff 7px);
-  background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9edff 3px, #e9edff 7px);
-
+  font-family: "ＭＳ Ｐゴシック", "MS PGothic", "メイリオ", Meiryo, Osaka, sans-serif;
+  background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 4px, #e9edff 4px, #e9edff 8px);
+  background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 4px, #e9edff 4px, #e9edff 8px);
 }
-.pageTitle{
+.pageTitle {
   /* 
     おしゃれなボックスデザイン
     https://saruwakakun.com/html-css/reference/box
@@ -50,12 +48,9 @@ body {
   padding: 0.5em 1em;
   max-width: 40%;
   text-align: left;
-  background: -moz-linear-gradient(#949494, #6d6d6d00);
-  background: -webkit-linear-gradient(#ffb03c, #ff708d);
-  background: linear-gradient(to right, #949494, #6d6d6d00);
   color: #FFF;
 }
-.pageTitle p{
+.pageTitle p {
   text-align: left;
   margin: 0;
   padding: 0;
@@ -65,9 +60,9 @@ body {
   height: 120px;
   background-color: #888;
   color: #fff; */
-  background: -moz-linear-gradient(#3cd8ff, #707eff);
-  background: -webkit-linear-gradient(#3cd8ff, #707eff);
-  background: linear-gradient(to right, #3cd8ff, #707eff);
+  background: -moz-linear-gradient( #707eff,#bff2ff);
+  background: -webkit-linear-gradient( #707eff,#bff2ff);
+  background: linear-gradient(to right, #707eff,#bff2ff);
   color: #FFF;
 }
 .grovalNavigation p {
@@ -80,7 +75,7 @@ body {
 main {
   min-height: 100vh;
   display: flex;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   width: auto;
 }
 .content {
@@ -92,7 +87,7 @@ main {
   width: 100%;
   padding: 30px;
 }
-.content .marginOn{
+.content .marginOn {
   padding: 15px;
 }
 article {
@@ -175,6 +170,7 @@ article {
 }
 
 /*チェックボックス等は非表示に*/
+
 .nav-unshown {
   display: none;
 }
@@ -324,39 +320,39 @@ footer a:hover {
   color: #81b3f5;
   text-decoration: underline;
 }
+
 /*
   パンくずリストとは？
   https://saruwakakun.com/html-css/basic/breadcrumb#section1
 */
+
 .breadcrumbs {
-  padding-left:10px;
-  margin-left:0;
+  padding-left: 10px;
+  margin-left: 0;
   background-color: #696969;
   height: auto;
 }
-
-.breadcrumbs li{
-  display:inline;/*横に並ぶように*/
+.breadcrumbs li {
+  display: inline;
+  /*横に並ぶように*/
   list-style: none;
   font-weight: bold;
   color: #fafafa;
 }
-
-.breadcrumbs li:after {/* >を表示*/
+.breadcrumbs li:after {
+  /* >を表示*/
   content: '>';
   padding: 0 3px;
   color: #ffffff;
 }
-
 .breadcrumbs li:last-child:after {
   content: '';
 }
-
 .breadcrumbs li a {
   text-decoration: none;
-  color: #d6d6d6;/*色*/
+  color: #d6d6d6;
+  /*色*/
 }
-
 .breadcrumbs li a:hover {
   color: #b9e4fd;
   text-decoration: underline;
@@ -383,32 +379,27 @@ footer a:hover {
     order: 0;
     padding: 10px;
   }
-  article{
+  article {
     order: 0;
   }
-  footer{
+  footer {
     height: 40px;
   }
   /* IE11 */
-  _:-ms-lang(x)::-ms-backdrop,
-  .phone_area{
+  _:-ms-lang(x)::-ms-backdrop, .phone_area {
     display: none;
   }
-  _:-ms-lang(x)::-ms-backdrop,
-  .grovalNavigation p{
+  _:-ms-lang(x)::-ms-backdrop, .grovalNavigation p {
     text-align: left;
     font-size: 1.4em;
   }
-  _:-ms-lang(x)::-ms-backdrop,
-  .localNavigation{
+  _:-ms-lang(x)::-ms-backdrop, .localNavigation {
     display: none;
   }
 }
-_:-ms-lang(x)::-ms-backdrop,
-  .ie_Only{
-    display: block;
-  }
-  _:-ms-lang(x)::-ms-backdrop,
-  section{
-    display: block;
-  }
+_:-ms-lang(x)::-ms-backdrop, .ie_Only {
+  display: block;
+}
+_:-ms-lang(x)::-ms-backdrop, section {
+  display: block;
+}
