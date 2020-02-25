@@ -37,8 +37,9 @@ body {
   flex: 3;
   max-width: 960px;
   font-family: "ＭＳ Ｐゴシック", "MS PGothic", "メイリオ", Meiryo, Osaka, sans-serif;
-  background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 4px, #e9edff 4px, #e9edff 8px);
-  background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 4px, #e9edff 4px, #e9edff 8px);
+  background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 10px, #e9edff 10px, #e9edff 20px);
+  background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 10px, #e9edff 10px, #e9edff 20px);
+  /* background:repeating-linear-gradient(135deg, #EFEFEF 0px, #EFEFEF 20px, #D9D9D9 20px, #D9D9D9 40px); */
 }
 .pageTitle {
   /* 
