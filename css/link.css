@@ -1,0 +1,38 @@
+.linkBox{
+  border: 2px solid #0094D6;
+  text-align: left;
+  margin: auto;
+  margin-top: 20px;
+  max-width: 80%;
+  background-color: #fffbf2;
+}
+.linkBox .ltitle{
+  display:inline-block;
+  font-size: 1.0em;
+  background: #0094D6;
+  color: #FFF;
+  margin: 0;
+  padding: .3em;
+  /* border-radius: 0 0 5px 0; */
+}
+.linkBox .inner{
+  /* 
+    CSSでノート風の罫線を作る方法
+    https://www.design-memo.com/coding/css-note
+  */
+  background: linear-gradient(#ccc 1px, transparent 1px) rgba(255, 251, 242, 0);
+  background-size: auto 1.5em;
+  line-height: 1.5em;
+  overflow: hidden;
+  margin-left: 4px;
+}
+.ltitle a{
+  color: rgb(255, 255, 255);
+}
+.ltitle a:hover {
+  color: #78ee88;
+  text-decoration: underline;
+}
+.ltitle a:active {
+  color: #48db43;
+}

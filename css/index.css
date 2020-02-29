@@ -1,9 +1,7 @@
-/* override */
 .breadcrumbs {
   /* height: 1.2em; */
   height: 10px;
 }
-
 .a1{
   padding: 30px;
 }
@@ -24,7 +22,9 @@ p.author{
   font-size: 1.2em;
   padding-bottom: 30px;
 }
-
+.access{
+  padding: 15px; 
+}
 /*
   スライドショー
   https://lopan.jp/css-animation-slideshow/

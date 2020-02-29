@@ -56,7 +56,8 @@ _:-ms-lang(x)::-ms-backdrop,
   left: 0;
   opacity: 0;
   /* マスクを表示しない */
-  background-color: #00000066;
+  /* background-color: #00000066; */
+  background-color: rgba(0, 0, 0, 0.4);
   /* マスクは半透明 */
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
