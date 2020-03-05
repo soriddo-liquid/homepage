@@ -8,13 +8,11 @@
   overflow: hidden;
 }
 .linkBox .ltitle{
-  display:inline-block;
   font-size: 1.0em;
   background: #0094D6;
   color: #FFF;
   margin: 0;
   padding: .3em;
-  /* border-radius: 0 0 5px 0; */
 }
 .linkBox .inner{
   /* 
