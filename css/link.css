@@ -1,5 +1,9 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 .linkBox{
-  display: block;
   border: 2px solid #0094D6;
   text-align: left;
   margin: auto;
