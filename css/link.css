@@ -10,7 +10,7 @@
   margin-top: 20px;
   width: 80%;
   background-color: #fffbf2;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .linkBox .ltitle{
   font-size: 1.0em;
