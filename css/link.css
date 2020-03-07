@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  width: 100%;
 }
 .linkBox{
   border: 2px solid #0094D6;
@@ -18,7 +19,7 @@
   color: #FFF;
   margin: 0;
   padding: .3em;
-  word-wrap: break-word;
+  
 }
 .linkBox .inner{
   /* 
@@ -30,9 +31,12 @@
   line-height: 1.5em;
   overflow: hidden;
   margin-left: 4px;
+  margin-right: 4px;
 }
 .ltitle a{
   color: rgb(255, 255, 255);
+  /* https://qiita.com/riritachibana/items/8088ac4ae1c7819c8c5d */
+  word-break: break-all;
 }
 .ltitle a:hover {
   color: #78ee88;
