@@ -13,7 +13,7 @@ section{
   width: 100%;
   height: auto;
   flex-basis: 100%;
-  background: #fff;
+  background: #eee;
   text-align: center;
 }
 .flex, .flex>* {
